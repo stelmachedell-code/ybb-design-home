@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ybb-design-home
+    runtime: static
+    buildCommand: echo "Static portfolio ready"
+    staticPublishPath: ./dist
+    autoDeployTrigger: commit

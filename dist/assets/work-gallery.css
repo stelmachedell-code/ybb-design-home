@@ -1,0 +1,55 @@
+@font-face { font-family: 'Award Labels'; font-weight: 400; font-display: swap; src: url('vendor/award-labels-400.woff') format('woff'); }
+@font-face { font-family: 'Award Labels'; font-weight: 700; font-display: swap; src: url('vendor/award-labels-700.woff') format('woff'); }
+.work-panel, .award-detail, .honors-panel, .honors-work-link { font-family: 'Microsoft YaHei', 'Work Labels', 'Award Labels', system-ui, sans-serif; }
+.work-circle[data-work-id="jingchu"] { background: #164AA8; color: #F3EBDD; font-family: 'Microsoft YaHei', 'Work Labels', 'Award Labels', sans-serif; }
+.award-gallery-content { background: #F3EBDD; padding-bottom: 24px; }
+.award-meta { padding-bottom: 10px; }
+.award-meta h2 { line-height: 1.65; font-size: 18px; }
+.award-recognition { padding: 0 24px 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.award-recognition ul { display: flex; flex-wrap: wrap; gap: 5px 20px; list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 1.8; color: #555044; }
+.award-recognition li::before { content: '★'; color: #164AA8; margin-right: 5px; }
+.award-honors-link, .honors-work-link { flex-shrink: 0; min-height: 44px; border: 0; border-bottom: 2px solid #F1D52F; color: #164AA8; background: transparent; cursor: pointer; font: inherit; font-size: 13px; }
+.award-gallery-hint { margin: 0; padding: 0 24px 12px; color: #66754A; font-size: 12px; }
+.award-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; padding: 0 24px; }
+.award-card { position: relative; padding: 0; border: 0; background: #e5dfd3; cursor: zoom-in; aspect-ratio: 3508 / 4961; overflow: hidden; text-align: left; font: inherit; }
+.award-card img { display: block; width: 100%; height: auto; }
+.award-card.is-loading { background: linear-gradient(110deg,#e5dfd3 25%,#f5f1e7 50%,#e5dfd3 75%); background-size: 200% 100%; animation: work-skeleton 1.5s linear infinite; }
+.award-card.has-error::after { content: '点击加载高清作品'; position: absolute; inset: 40% 0 auto; text-align: center; color: #164AA8; background: #F3EBDD; padding: 16px; }
+.award-caption { position: absolute; top: 12px; left: 10px; right: 10px; padding: 10px 12px; background: #F1D52F; color: #164AA8; font-size: 13px; line-height: 1.6; font-weight: 700; box-shadow: 3px 3px 0 #164AA8; opacity: 0; transform: translateY(6px); transition: opacity .2s, transform .2s; pointer-events: none; }
+.award-caption small { display: block; font-size: 10px; font-weight: 400; }
+.award-card:hover .award-caption, .award-card:focus-visible .award-caption { opacity: 1; transform: none; }
+.award-detail { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; padding: 0; margin: 0; border: 0; background: transparent; overflow: hidden; color: #1a1a1a; }
+.award-detail[open] { display: grid; place-items: center; }
+.award-detail::backdrop { background: rgba(15,16,19,.78); backdrop-filter: blur(4px); }
+.award-detail-panel { position: relative; display: flex; flex-direction: column; width: 94vw; height: 94dvh; background: #F3EBDD; border: 2px solid #1a1a1a; min-height: 0; overflow: hidden; }
+.award-detail header, .award-detail footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 18px; flex-shrink: 0; }
+.award-detail h3 { margin: 0; font-size: 15px; font-weight: 600; }
+.award-detail button { min-height: 44px; padding: 8px; border: 0; color: #164AA8; background: transparent; cursor: pointer; font: inherit; font-size: 13px; }
+.award-detail .award-detail-close { font: 32px/1 Arial,sans-serif; min-width: 44px; }
+.award-detail-stage { position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: #25241f; }
+.award-detail-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.award-detail img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.award-detail-stage.is-zoomed .award-detail-canvas { position: static; width: max-content; height: max-content; min-width: 100%; min-height: 100%; }
+.award-detail-stage.is-zoomed img { width: var(--original-width); height: auto; max-width: none; max-height: none; }
+.award-count { font-size: 12px; white-space: nowrap; }
+.award-detail-status { position: absolute; bottom: 65px; left: 50%; transform: translateX(-50%); color: #164AA8; background: #F3EBDD; font-size: 12px; padding: 8px; max-width: 85%; pointer-events: none; }
+.award-detail-status:empty { display: none; }
+.award-detail :focus-visible { outline: 3px solid #164AA8; outline-offset: -3px; }
+@media (max-width: 900px) { .award-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .award-recognition { align-items: flex-start; } }
+@media (max-width: 600px) {
+ .work-tab { padding-inline: 7px; font-size: 13px; }
+ .award-grid { grid-template-columns: 1fr; padding: 0 12px; gap: 18px; }
+ .award-meta h2 { font-size: 16px; }
+ .award-recognition { flex-direction: column; gap: 4px; padding: 0 12px 10px; }
+ .award-recognition ul { font-size: 11px; gap: 3px; }
+ .award-gallery-hint { padding-inline: 12px; }
+ .award-caption { position: static; display: block; opacity: 1; transform: none; box-shadow: none; }
+ .award-card { aspect-ratio: auto; }
+ .award-detail-panel { width: calc(100vw - 8px); height: calc(100dvh - 8px); }
+ .award-detail header, .award-detail footer { padding-inline: 6px; gap: 2px; }
+ .award-detail h3 { font-size: 13px; }
+ .award-detail footer button { font-size: 12px; padding: 4px; }
+ .honors-work-link { max-width: 75%; font-size: 12px; }
+}
+@media (hover: none) { .award-caption { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .award-card { animation: none !important; } .award-caption { transition: none; } }

@@ -1,0 +1,105 @@
+@font-face { font-family: 'Entrance Labels'; font-weight: 400; font-display: swap; src: url('vendor/entrance-labels-400.woff') format('woff'); }
+@font-face { font-family: 'Entrance Labels'; font-weight: 700; font-display: swap; src: url('vendor/entrance-labels-700.woff') format('woff'); }
+#scene-title { cursor: pointer; }
+#scene-title:focus-visible { outline: 3px dashed #164AA8; outline-offset: 8px; }
+.entrance-guide {
+  position: absolute;
+  z-index: 25;
+  left: 50%;
+  bottom: 20%;
+  width: min(760px, calc(100% - 48px));
+  transform: translate(-50%, 12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .3s ease, visibility .25s;
+}
+.entrance-guide.is-visible { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
+.entrance-guide.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 120vh);
+  transition: transform .55s cubic-bezier(.7, 0, .3, 1), opacity .4s ease, visibility 0s linear .55s;
+}
+.entrance-guide-paper {
+  position: relative;
+  margin-left: 132px;
+  padding: 32px 46px 32px 56px;
+  background: #F3EBDD;
+  color: #202020;
+  border: 3px solid #202020;
+  border-radius: 6px 20px 8px 18px;
+  box-shadow: 9px 9px 0 #F1D52F;
+}
+.entrance-guide-paper::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 54px;
+  width: 76px;
+  height: 20px;
+  background: #A8DDDA;
+  transform: rotate(-5deg);
+  border: 1px solid #164AA8;
+}
+.entrance-guide-kicker { color: #164AA8; font: 700 14px/1.5 monospace; letter-spacing: .12em; }
+.entrance-guide p { margin: 12px 0 0; font: 17px/1.9 Arial, 'Microsoft YaHei', 'Entrance Labels', sans-serif; text-wrap: pretty; }
+.entrance-guide strong { color: #164AA8; font-weight: 700; }
+.entrance-guide-robot-wrap { position: absolute; left: 0; bottom: -16px; width: 190px; pointer-events: none; }
+.entrance-guide-robot { display: block; width: 100%; height: auto; transform-origin: 60% 90%; }
+.entrance-guide.is-visible .entrance-guide-robot { animation: entrance-hello .75s ease-out; }
+.entrance-guide-close { position: absolute; top: 0; right: 0; width: 52px; height: 52px; border: 0; background: transparent; color: #202020; font: 30px/1 sans-serif; cursor: pointer; }
+.entrance-guide-close:hover { color: #D74632; }
+.entrance-guide-close:focus-visible { outline: 2px solid #164AA8; outline-offset: -5px; }
+@keyframes entrance-hello { 0%,100% { transform: rotate(0); } 35% { transform: rotate(-5deg); } 70% { transform: rotate(3deg); } }
+@media (max-width: 600px) {
+  .entrance-guide { bottom: 18%; width: calc(100% - 28px); }
+  .entrance-guide-paper { margin-left: 44px; padding: 26px 26px 26px 34px; }
+  .entrance-guide p { font-size: 15px; }
+  .entrance-guide-robot-wrap { width: 116px; left: -8px; bottom: -60px; }
+  .entrance-guide-close { width: 44px; height: 44px; font-size: 26px; }
+}
+@media (max-height: 500px) and (min-width: 601px) { .entrance-guide { bottom: 8%; } }
+@media (prefers-reduced-motion: reduce) {
+  .entrance-guide { transition: opacity .15s; }
+  .entrance-guide.is-leaving { transition: opacity .15s; }
+  .entrance-guide.is-visible .entrance-guide-robot { animation: none; }
+}
+
+.entrance-guide-name { white-space: nowrap; }
+
+/* Reusable scene-guide popups (living room + close-up scenes) */
+.scene-guide-main {
+  margin: 12px 0 0;
+  font: 17px/1.9 Arial, 'Microsoft YaHei', 'Entrance Labels', sans-serif;
+}
+.scene-guide-note {
+  margin: 10px 0 0;
+  color: #66754A;
+  font: 700 13px/1.7 'Microsoft YaHei', 'Entrance Labels', sans-serif;
+}
+.scene-guide .entrance-guide-paper {
+  padding: 32px 46px 32px 56px;
+}
+@media (max-width: 600px) {
+  .scene-guide-main { font-size: 15px; }
+  .scene-guide-note { font-size: 12px; }
+  .scene-guide .entrance-guide-paper { padding: 26px 26px 26px 34px; }
+}
+
+/* Living room guide: keep the robot larger but clear of the copy */
+@media (min-width: 601px) {
+  #guide-scene-02 .entrance-guide-robot-wrap {
+    width: 240px;
+    bottom: -20px;
+  }
+  #guide-scene-02 .entrance-guide-paper {
+    margin-left: 190px;
+  }
+}
+.entrance-guide-hi{position:absolute;top:-12px;left:46%;z-index:2;font-family:var(--pixel),monospace;font-size:15px;color:#FFFFFF;background:#111111;padding:7px 10px 6px;border-radius:2px;box-shadow:3px 3px 0 #F1D52F;opacity:0;transform:scale(.4) rotate(-6deg);pointer-events:none}
+.entrance-guide.is-visible .entrance-guide-hi{animation:entrance-hi-pop .5s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:.4s}
+@keyframes entrance-hi-pop{0%{opacity:0;transform:scale(.4) rotate(-8deg)}60%{opacity:1;transform:scale(1.18) rotate(4deg)}100%{opacity:1;transform:scale(1) rotate(-2deg)}}
+@media (prefers-reduced-motion: reduce){.entrance-guide.is-visible .entrance-guide-hi{animation:none;opacity:1;transform:scale(1) rotate(-2deg)}}
+@media (max-width:600px){.entrance-guide-hi{left:24%;top:-32px;font-size:13px}}
