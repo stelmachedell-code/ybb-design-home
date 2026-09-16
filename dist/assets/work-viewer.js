@@ -132,9 +132,12 @@
     current = index;
     const work = worksData[index];
     observer?.disconnect();
+    content.classList.remove('is-zoomed');
+    scroll.scrollLeft = 0;
     tabs.forEach((tab,i) => tab.setAttribute('aria-pressed', String(i === index)));
+    tabs[index]?.scrollIntoView({block: 'nearest', inline: 'nearest'});
     if (work.layout === 'gallery') { window.renderWorkGallery(work, content); scroll.scrollTop = 0; return; }
-    content.innerHTML = `<div class="work-meta"><div><h2 id="work-title">${work.title}</h2><p>${work.englishTitle} / ${String(work.pageCount).padStart(2,'0')} PAGES</p><span class="work-mobile-tip">轻触作品放大，左右滑动查看细节</span></div><a class="work-pdf" href="${work.pdfUrl}" target="_blank" rel="noopener">VIEW FULL PDF ↗</a></div>`;
+    content.innerHTML = `<div class="work-meta"><div><h2 id="work-title">${work.title}</h2><p>${work.englishTitle} / ${String(work.pageCount).padStart(2,'0')} PAGES</p><button type="button" class="work-mobile-tip work-zoom" aria-pressed="false">放大阅读 ↗</button></div><a class="work-pdf" href="${work.pdfUrl}" target="_blank" rel="noopener">VIEW FULL PDF ↗</a></div>`;
     observer = new IntersectionObserver(items => items.forEach(item => { if (item.isIntersecting) { loadImage(item.target); observer.unobserve(item.target); } }), {root: scroll, rootMargin: '600px 0px'});
     work.pages.forEach((page, i) => {
       const figure = document.createElement('figure');
@@ -155,18 +158,23 @@
   }
 
   content.addEventListener('click', event => {
-    if (!touch.matches && innerWidth > 600) return;
+    if (!touch.matches && innerWidth > 900) return;
     const figure = event.target.closest('.work-image');
-    if (!figure || event.target.closest('button, a')) return;
-    const image = figure.querySelector('img');
-    const zoomIn = !figure.classList.contains('is-zoomed');
-    content.querySelectorAll('.work-image.is-zoomed').forEach(item => {
-      item.classList.remove('is-zoomed');
-      item.querySelector('img')?.setAttribute('sizes', 'calc(100vw - 16px)');
+    const zoomButton = event.target.closest('.work-zoom');
+    if ((!figure && !zoomButton) || event.target.closest('a')) return;
+    const anchor = figure || content.querySelector('.work-image');
+    const oldTop = anchor.getBoundingClientRect().top;
+    const zoomIn = content.classList.toggle('is-zoomed');
+    content.querySelectorAll('.work-image img').forEach(image => {
+      image.sizes = `${scroll.clientWidth * (zoomIn ? 2 : 1)}px`;
     });
-    figure.classList.toggle('is-zoomed', zoomIn);
-    if (image) image.sizes = zoomIn ? '200vw' : 'calc(100vw - 16px)';
-    requestAnimationFrame(() => { scroll.scrollLeft = zoomIn ? Math.max(0, (figure.scrollWidth - scroll.clientWidth) / 2) : 0; });
+    const button = content.querySelector('.work-zoom');
+    button.textContent = zoomIn ? '恢复全宽 ↙' : '放大阅读 ↗';
+    button.setAttribute('aria-pressed', String(zoomIn));
+    requestAnimationFrame(() => {
+      scroll.scrollTop += anchor.getBoundingClientRect().top - oldTop;
+      scroll.scrollLeft = zoomIn ? scroll.clientWidth / 2 : 0;
+    });
   });
   function switchWork(index) {
     if (closing) return;

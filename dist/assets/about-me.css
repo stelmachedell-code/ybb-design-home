@@ -116,6 +116,14 @@
 .about-view-work:hover .about-view-work-tip{opacity:1;transform:translate(-50%,0)}
 @media (max-width:600px){.about-experience{grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:10px}.about-view-work{min-height:44px;align-items:center;padding-inline:10px}}
 .about-intro-doodle{position:absolute;right:0;bottom:0;width:clamp(340px,30vw,480px);height:auto;object-fit:contain;pointer-events:none;z-index:0;opacity:0.6}
+/* Compact windows must keep experience links clear of decorative artwork. */
+@media (max-width:1500px), (max-height:850px) {
+ .about-panel .about-sticker-right-bottom { display:none; }
+}
+@media (max-width:1000px) {
+ .about-contact .about-education-school { white-space:normal; }
+ .about-experience { grid-template-columns:minmax(0,1fr) auto; }
+}
 @media (max-width:1000px){.about-intro-doodle{display:none}}
 
 /* Desktop: loosen the two dense information areas without changing layout. */

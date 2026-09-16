@@ -406,6 +406,525 @@ window.worksData = [
     "pageCount": 5
   },
   {
+    "id": "ux",
+    "shortLabel": "UX作品",
+    "circleLines": [
+      "UX",
+      "作品"
+    ],
+    "title": "UX作品",
+    "englishTitle": "UX DESIGN",
+    "cover": "public/works/ux-20260916/cover.webp",
+    "pages": [
+      {
+        "src": "public/works/ux-20260916/01-01.webp",
+        "small": "public/works/ux-20260916/01-01-960.webp",
+        "width": 1672,
+        "height": 941,
+        "page": 1,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/02-01.webp",
+        "small": "public/works/ux-20260916/02-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/02-02.webp",
+        "small": "public/works/ux-20260916/02-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/02-03.webp",
+        "small": "public/works/ux-20260916/02-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/02-04.webp",
+        "small": "public/works/ux-20260916/02-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/02-05.webp",
+        "small": "public/works/ux-20260916/02-05-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/02-06.webp",
+        "small": "public/works/ux-20260916/02-06-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 2,
+        "part": 6
+      },
+      {
+        "src": "public/works/ux-20260916/02-07.webp",
+        "small": "public/works/ux-20260916/02-07-960.webp",
+        "width": 1920,
+        "height": 1352,
+        "page": 2,
+        "part": 7
+      },
+      {
+        "src": "public/works/ux-20260916/03-01.webp",
+        "small": "public/works/ux-20260916/03-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/03-02.webp",
+        "small": "public/works/ux-20260916/03-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/03-03.webp",
+        "small": "public/works/ux-20260916/03-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/03-04.webp",
+        "small": "public/works/ux-20260916/03-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/03-05.webp",
+        "small": "public/works/ux-20260916/03-05-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/03-06.webp",
+        "small": "public/works/ux-20260916/03-06-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 6
+      },
+      {
+        "src": "public/works/ux-20260916/03-07.webp",
+        "small": "public/works/ux-20260916/03-07-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 7
+      },
+      {
+        "src": "public/works/ux-20260916/03-08.webp",
+        "small": "public/works/ux-20260916/03-08-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 8
+      },
+      {
+        "src": "public/works/ux-20260916/03-09.webp",
+        "small": "public/works/ux-20260916/03-09-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 9
+      },
+      {
+        "src": "public/works/ux-20260916/03-10.webp",
+        "small": "public/works/ux-20260916/03-10-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 10
+      },
+      {
+        "src": "public/works/ux-20260916/03-11.webp",
+        "small": "public/works/ux-20260916/03-11-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 11
+      },
+      {
+        "src": "public/works/ux-20260916/03-12.webp",
+        "small": "public/works/ux-20260916/03-12-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 12
+      },
+      {
+        "src": "public/works/ux-20260916/03-13.webp",
+        "small": "public/works/ux-20260916/03-13-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 13
+      },
+      {
+        "src": "public/works/ux-20260916/03-14.webp",
+        "small": "public/works/ux-20260916/03-14-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 14
+      },
+      {
+        "src": "public/works/ux-20260916/03-15.webp",
+        "small": "public/works/ux-20260916/03-15-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 15
+      },
+      {
+        "src": "public/works/ux-20260916/03-16.webp",
+        "small": "public/works/ux-20260916/03-16-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 16
+      },
+      {
+        "src": "public/works/ux-20260916/03-17.webp",
+        "small": "public/works/ux-20260916/03-17-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 17
+      },
+      {
+        "src": "public/works/ux-20260916/03-18.webp",
+        "small": "public/works/ux-20260916/03-18-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 3,
+        "part": 18
+      },
+      {
+        "src": "public/works/ux-20260916/03-19.webp",
+        "small": "public/works/ux-20260916/03-19-960.webp",
+        "width": 1920,
+        "height": 697,
+        "page": 3,
+        "part": 19
+      },
+      {
+        "src": "public/works/ux-20260916/04-01.webp",
+        "small": "public/works/ux-20260916/04-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/04-02.webp",
+        "small": "public/works/ux-20260916/04-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/04-03.webp",
+        "small": "public/works/ux-20260916/04-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/04-04.webp",
+        "small": "public/works/ux-20260916/04-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/04-05.webp",
+        "small": "public/works/ux-20260916/04-05-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/04-06.webp",
+        "small": "public/works/ux-20260916/04-06-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 6
+      },
+      {
+        "src": "public/works/ux-20260916/04-07.webp",
+        "small": "public/works/ux-20260916/04-07-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 7
+      },
+      {
+        "src": "public/works/ux-20260916/04-08.webp",
+        "small": "public/works/ux-20260916/04-08-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 4,
+        "part": 8
+      },
+      {
+        "src": "public/works/ux-20260916/04-09.webp",
+        "small": "public/works/ux-20260916/04-09-960.webp",
+        "width": 1920,
+        "height": 1412,
+        "page": 4,
+        "part": 9
+      },
+      {
+        "src": "public/works/ux-20260916/05-01.webp",
+        "small": "public/works/ux-20260916/05-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 5,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/05-02.webp",
+        "small": "public/works/ux-20260916/05-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 5,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/05-03.webp",
+        "small": "public/works/ux-20260916/05-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 5,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/05-04.webp",
+        "small": "public/works/ux-20260916/05-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 5,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/05-05.webp",
+        "small": "public/works/ux-20260916/05-05-960.webp",
+        "width": 1920,
+        "height": 957,
+        "page": 5,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/06-01.webp",
+        "small": "public/works/ux-20260916/06-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/06-02.webp",
+        "small": "public/works/ux-20260916/06-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/06-03.webp",
+        "small": "public/works/ux-20260916/06-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/06-04.webp",
+        "small": "public/works/ux-20260916/06-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/06-05.webp",
+        "small": "public/works/ux-20260916/06-05-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/06-06.webp",
+        "small": "public/works/ux-20260916/06-06-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 6
+      },
+      {
+        "src": "public/works/ux-20260916/06-07.webp",
+        "small": "public/works/ux-20260916/06-07-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 7
+      },
+      {
+        "src": "public/works/ux-20260916/06-08.webp",
+        "small": "public/works/ux-20260916/06-08-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 8
+      },
+      {
+        "src": "public/works/ux-20260916/06-09.webp",
+        "small": "public/works/ux-20260916/06-09-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 9
+      },
+      {
+        "src": "public/works/ux-20260916/06-10.webp",
+        "small": "public/works/ux-20260916/06-10-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 10
+      },
+      {
+        "src": "public/works/ux-20260916/06-11.webp",
+        "small": "public/works/ux-20260916/06-11-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 11
+      },
+      {
+        "src": "public/works/ux-20260916/06-12.webp",
+        "small": "public/works/ux-20260916/06-12-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 6,
+        "part": 12
+      },
+      {
+        "src": "public/works/ux-20260916/06-13.webp",
+        "small": "public/works/ux-20260916/06-13-960.webp",
+        "width": 1920,
+        "height": 807,
+        "page": 6,
+        "part": 13
+      },
+      {
+        "src": "public/works/ux-20260916/07-01.webp",
+        "small": "public/works/ux-20260916/07-01-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 1
+      },
+      {
+        "src": "public/works/ux-20260916/07-02.webp",
+        "small": "public/works/ux-20260916/07-02-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 2
+      },
+      {
+        "src": "public/works/ux-20260916/07-03.webp",
+        "small": "public/works/ux-20260916/07-03-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 3
+      },
+      {
+        "src": "public/works/ux-20260916/07-04.webp",
+        "small": "public/works/ux-20260916/07-04-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 4
+      },
+      {
+        "src": "public/works/ux-20260916/07-05.webp",
+        "small": "public/works/ux-20260916/07-05-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 5
+      },
+      {
+        "src": "public/works/ux-20260916/07-06.webp",
+        "small": "public/works/ux-20260916/07-06-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 6
+      },
+      {
+        "src": "public/works/ux-20260916/07-07.webp",
+        "small": "public/works/ux-20260916/07-07-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 7
+      },
+      {
+        "src": "public/works/ux-20260916/07-08.webp",
+        "small": "public/works/ux-20260916/07-08-960.webp",
+        "width": 1920,
+        "height": 1600,
+        "page": 7,
+        "part": 8
+      },
+      {
+        "src": "public/works/ux-20260916/07-09.webp",
+        "small": "public/works/ux-20260916/07-09-960.webp",
+        "width": 1920,
+        "height": 549,
+        "page": 7,
+        "part": 9
+      }
+    ],
+    "pdfUrl": "public/works/ux-20260916/ux.pdf",
+    "pageCount": 7
+  },
+  {
     "id": "other",
     "shortLabel": "其他",
     "title": "其他作品 / 练习",

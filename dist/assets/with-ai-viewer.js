@@ -284,7 +284,9 @@
     // Keep one full-file request in flight; later drags only update the final target.
     if (fetchController) return;
 
-    if (objectUrl || isBuffered(target)) {
+    const canSeek = Array.from({length: video.seekable.length}, (_, i) => i)
+      .some(i => target >= video.seekable.start(i) && target <= video.seekable.end(i));
+    if (objectUrl || isBuffered(target) || canSeek) {
       video.currentTime = target;
       seekTarget = null;
       updateTime();

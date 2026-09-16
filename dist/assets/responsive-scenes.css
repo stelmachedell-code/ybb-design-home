@@ -23,7 +23,7 @@
   border-radius: 2px;
   background: #1a1a1a;
   color: #fff;
-  font: 8px/1.5 var(--pixel), monospace;
+  font: 700 14px/1.5 'Microsoft YaHei', system-ui, sans-serif;
   white-space: nowrap;
   touch-action: manipulation;
 }
@@ -44,7 +44,7 @@
 
 @media (max-width: 420px) {
   .mobile-scene-actions { gap: 5px; padding: 5px; }
-  .mobile-scene-actions button { padding-inline: 9px; font-size: 7px; }
+  .mobile-scene-actions button { padding-inline: 9px; font-size: 14px; }
 }
 
 @media (orientation: landscape) and (max-height: 520px) {

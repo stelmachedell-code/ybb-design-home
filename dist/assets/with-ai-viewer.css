@@ -317,3 +317,10 @@
 }
 .with-ai-tap-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;background:rgba(0,0,0,0.55);color:#F1D52F;font:700 18px/1.4 'Microsoft YaHei','PingFang SC',sans-serif;padding:12px 22px;border-radius:2px;letter-spacing:.06em;white-space:nowrap;pointer-events:none;transition:opacity .2s ease}
 .with-ai-tap-hint.is-hidden{opacity:0}
+@media (max-width:900px), (pointer:coarse) {
+ .with-ai-progress { min-height:44px; touch-action:none; }
+ .with-ai-panel { height:94dvh; max-height:94dvh; }
+}
+@media (max-width:600px) {
+ .with-ai-panel { height:100dvh; max-height:100dvh; }
+}

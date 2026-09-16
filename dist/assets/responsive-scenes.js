@@ -9,6 +9,8 @@
 
     const sceneBox = scene.getBoundingClientRect();
     const bgBox = bg.getBoundingClientRect();
+    const sceneScaleX = sceneBox.width / scene.clientWidth || 1;
+    const sceneScaleY = sceneBox.height / scene.clientHeight || 1;
     const scale = Math.max(bgBox.width / bg.naturalWidth, bgBox.height / bg.naturalHeight);
     const imageWidth = bg.naturalWidth * scale;
     const imageHeight = bg.naturalHeight * scale;
@@ -20,10 +22,10 @@
       if (values.length !== 4 || values.some(value => !Number.isFinite(value))) return;
       const [x, y, width, height] = values;
       Object.assign(element.style, {
-        left: `${imageLeft + imageWidth * x / 100}px`,
-        top: `${imageTop + imageHeight * y / 100}px`,
-        width: `${imageWidth * width / 100}px`,
-        height: `${imageHeight * height / 100}px`,
+        left: `${(imageLeft + imageWidth * x / 100) / sceneScaleX}px`,
+        top: `${(imageTop + imageHeight * y / 100) / sceneScaleY}px`,
+        width: `${imageWidth * width / 100 / sceneScaleX}px`,
+        height: `${imageHeight * height / 100 / sceneScaleY}px`,
         right: 'auto'
       });
     });
@@ -34,14 +36,23 @@
 
   scenes.forEach(scene => {
     const bg = scene.querySelector('.room-bg');
-    if (bg) bg.addEventListener('load', () => syncScene(scene));
+    if (bg) {
+      let frame;
+      const schedule = () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => syncScene(scene));
+      };
+      bg.addEventListener('load', schedule);
+      new ResizeObserver(schedule).observe(scene);
+      new MutationObserver(schedule).observe(bg, {attributes:true, attributeFilter:['style']});
+    }
     new MutationObserver(() => {
       if (scene.classList.contains('active')) requestAnimationFrame(() => syncScene(scene));
     }).observe(scene, {attributes: true, attributeFilter: ['class']});
   });
 
   const navs = [
-    ['scene-02', [['ABOUT ME', () => window.openAboutModal?.()], ['MY WORK', () => document.querySelector('.hs-work')?.click()], ['WITH AI', () => document.querySelector('.hs-studio')?.click()]]],
+    ['scene-02', [['关于我', () => window.openAboutModal?.()], ['我的作品', () => document.querySelector('.hs-work')?.click()], ['AI作品', () => document.querySelector('.hs-studio')?.click()]]],
     ['scene-03', [['查看作品', () => document.querySelector('.hs-work-poster')?.click()]]],
     ['scene-04', [['查看 AI 作品', () => document.querySelector('.hs-computer')?.click()], ['查看荣誉', () => document.querySelector('.hs-trophy')?.click()]]],
     ['scene-05', [['查看证书', () => window.openHonorsModal?.()]]]
